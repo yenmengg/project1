@@ -1,0 +1,8 @@
+addr1 addr2 10
+addr3 addr2 1
+addr5 addr3 4
+addr4 addr1 5
+addr2 addr4 8
+addr1 addr5 6
+addr4 addr3 4
+addr5 addr1 7
