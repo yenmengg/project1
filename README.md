@@ -110,9 +110,12 @@ Blocks are identified by long numbers that include encrypted transaction informa
 
 4. Why is setting block generation time necessary?
 
-The Block time defines the time it takes to mine a block.
+The block generation time determines the number of transactions put into a block.
 
-The expected block time is set at a constant value to make sure, miners cannot impact the security of the network by adding more computational power. The average block time of the network is evaluated after n number of blocks, and if it is greater than the expected block time, then the difficulty level of the proof of work algorithm will be reduced, and if it is less than the expected block time then the difficulty level will be increased. 
+The longer block generation time is, the more transactions could be added into pendingTransactions.
+
+Therefore, more time to validate pendingTransactions (valid signature?) and could fail to add transaction into block since total sent amount so far exceeds the balance for the from address.
+
 
 5. When to update the account balance?
 
