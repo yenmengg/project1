@@ -98,18 +98,19 @@ UTXO 解決 Account model 同一個地址（帳戶）無法「同時」進行兩
 一個地址可以「同時」將多個錢堆發送給多個不同的地址，在同一個區塊，甚至同一筆交易中完成。可以把多個錢堆同時進行交易，讓交易變得更加有效率。
 
 2. How to ensure transaction order in an account based model?
+
 以太幣為了避免 Double Spending, 同一筆錢被花了兩次，會以 Nonce 來標註每一筆交易的先後次序，若同時發送多筆交易，一旦前面有一筆交易卡住，則後面的交易也都會跟著塞住。
 
 3. What is transaction/block?
+
 A transaction is a cryptographically signed instruction from an account that changes the state of the blockchain. We can track the details of all transactions in the network.
 
 A block is a place in a blockchain where information is stored and encrypted.
 Blocks are identified by long numbers that include encrypted transaction information from previous blocks and new transaction information.
 
 4. Why is setting block generation time necessary?
-The 
 
-Block time defines the time it takes to mine a block.
+The Block time defines the time it takes to mine a block.
 
 The expected block time is set at a constant value to make sure, miners cannot impact the security of the network by adding more computational power. The average block time of the network is evaluated after n number of blocks, and if it is greater than the expected block time, then the difficulty level of the proof of work algorithm will be reduced, and if it is less than the expected block time then the difficulty level will be increased. 
 
